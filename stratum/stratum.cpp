@@ -165,6 +165,7 @@ YAAMP_ALGO g_algos[] =
 	{"m7m", m7m_hash, 0x10000, 0, 0},
 	{"megabtx", megabtx_hash, 0x100, 0, 0}, /* Bitcore New Algo*/
 	{"megamec", megamec_hash, 0x100, 0, 0}, /* Megacoin New Algo*/
+        {"mike", mike_hash, 0x10000, 0, 0},
 	{"minotaur", minotaur_hash, 1, 0, 0},
 	{"minotaurx", minotaurx_hash, 1, 0, 0},
 	{"myr-gr", groestlmyriad_hash, 1, 0, 0}, /* groestl + sha 64 */
