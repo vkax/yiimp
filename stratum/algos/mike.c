@@ -122,9 +122,9 @@ void mike_hash(const char* input, char* output, uint32_t len) {
 
 	void *in = (void*) input;
 	int size = 80;
-	uint8_t selectedAlgoOutput[15] = {0};
+	uint8_t selectedAlgoOutput[11] = {0};
 	uint8_t selectedCNAlgoOutput[6] = {0};
-	getAlgoString(&input[4], 64, selectedAlgoOutput, 15);
+	getAlgoString(&input[4], 64, selectedAlgoOutput, 11);
 	getAlgoString(&input[4], 64, selectedCNAlgoOutput, 6);
 	int i;
 	for (i = 0; i < 14; i++)
@@ -160,7 +160,7 @@ void mike_hash(const char* input, char* output, uint32_t len) {
 		if(cnSelection >=0) {
 			cnAlgo = selectedCNAlgoOutput[(uint8_t)cnSelection];
 		} else {
-			cnAlgo = 10; // skip cn hashing for this loop iteration
+			cnAlgo = 6; // skip cn hashing for this loop iteration
 		}
 		//selection cnAlgo. if a CN algo is selected then core algo will not be selected
 		switch(cnAlgo)
